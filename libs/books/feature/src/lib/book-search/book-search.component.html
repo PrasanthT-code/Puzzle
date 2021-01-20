@@ -6,7 +6,6 @@
       type="search"
       placeholder="Search for books to add to your reading list"
       formControlName="term"
-      (keyup)="searchBooks()"
     />
     <button mat-icon-button matSuffix>
       <mat-icon>search</mat-icon>
@@ -33,6 +32,7 @@
           <p [innerHTML]="b.description"></p>
           <div>
             <button
+              data-testing="book-add-to-list"
               mat-flat-button
               color="primary"
               (click)="addBookToReadingList(b)"
